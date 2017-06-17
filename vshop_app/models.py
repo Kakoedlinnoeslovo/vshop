@@ -4,9 +4,6 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 # Create your models here.
-
-DEFAULT_EXAM_ID = 1
-
 class Item(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
@@ -14,8 +11,11 @@ class Item(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-    verbose_name = 'Предмет'
-    verbose_name_plural = 'Предметы'
+    url = models.DateTimeField(
+            blank=True, null=True)
+    class Meta:
+        verbose_name = 'Предмет'
+        verbose_name_plural = 'Предметы'
     def __unicode__(self):
         return self.title
 

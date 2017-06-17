@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django product</title>
+</head>
+<body>
+<h1>product for {{ user }}</h1>
+{% if items %}
+<ul>
+{% for item in items %}
+<li><a href="{{ item_edit }}">
+{{ item }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No product found.</p>
+{% endif %}
+
+</body>
+</html>
