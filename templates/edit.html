@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{item}}</h1>
+<form action="{% url 'item_about' item.id  %}" method="post">{% csrf_token %}
+     <label for="item_about">Редактировать текст </label>
+     <input id="text_field" type="search" name="text_field" value="{{ text_field }}">
+    <input type="submit" value="Отправить">
+</form>
+</body>
+</html>

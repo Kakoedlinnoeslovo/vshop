@@ -11,8 +11,6 @@ class Item(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-    url = models.DateTimeField(
-            blank=True, null=True)
     class Meta:
         verbose_name = 'Предмет'
         verbose_name_plural = 'Предметы'
